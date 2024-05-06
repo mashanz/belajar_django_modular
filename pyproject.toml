@@ -5,7 +5,9 @@ description = "Belajar Django Modular"
 authors = [
     {name = "Mashanz", email = "mangatkk@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "django>=5.0.4",
+]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
