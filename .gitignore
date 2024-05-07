@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 .nix-shell
+.DS_Store
