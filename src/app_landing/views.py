@@ -10,9 +10,17 @@ def agregasi(input):
 
 
 def page_landing(request):
-    # return render(request, "app_landing/index.html")
-    return JsonResponse({"hello": "World", "data_dict": {"id": 1, "ar": [1, 2, 3, 4]}})
+    return render(request, "app_landing/index.html")
 
+def page_semua(request):
+    return render(request, "app_landing/semua.html")
+
+
+def page_gambar(request):
+    return render(request, "app_landing/gambar.html")
+
+def page_video(request):
+    return render(request, "app_landing/video.html")
 
 def page_about(request, id):
     if id:

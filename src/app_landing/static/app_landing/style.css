@@ -1,0 +1,13 @@
+button {
+  color: green;
+}
+
+#content {
+  color: blue; 
+  font-size: 2rem;
+}
+
+.card {
+  border: 1px black solid;
+  padding: 10px;
+}

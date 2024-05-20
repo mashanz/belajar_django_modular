@@ -163,3 +163,5 @@ cython_debug/
 
 .nix-shell
 .DS_Store
+node_modules
+dump.rdb

@@ -1,1 +1,33 @@
-ini adalah templates dari landing pages
+{% load static %}
+
+<html data-theme="light">
+  <head>
+    <title>
+      Example HTMX Navigation
+    </title>
+    <script src="{% static 'app_landing/htmx.min.js' %}"></script>
+    <style>
+    body {
+      background-color: #99ffff;
+    }
+    </style>
+  
+    <link rel="stylesheet" href="{% static 'app_landing/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app_landing/tailwind.css' %}">
+    
+  </head>
+
+  <body>
+      ini adalah contoh HTMLX
+
+      <button class="bg-green-500" hx-get="/page_semua" hx-target="#content">SEMUA</button>
+      <button class="btn btn-primary" hx-get="/page_gambar" hx-target="#content">GAMBAR</button>
+      <button hx-get="/page_video" hx-target="#content">VIDEO</button>
+
+    <div class="card">Testing</div>
+
+    <div id="content">
+      -- kosongang --
+    </div>
+  </body>
+</html>

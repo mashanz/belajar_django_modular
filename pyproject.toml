@@ -1,15 +1,16 @@
 [project]
 name = "belajar_django_modular"
-version = "0.1.0"
+version = "1.1.1"
 description = "Belajar Django Modular"
 authors = [{ name = "Mashanz", email = "mangatkk@gmail.com" }]
-dependencies = ["django>=5.0.4"]
-requires-python = ">=3.11"
+dependencies = ["django==5.0.4"]
+requires-python = "==3.11.8"
 readme = "README.md"
 license = { text = "MIT" }
 
 [tool.pdm.scripts]
 dev = "pdm run src/manage.py runserver"
+tw-watch = "bunx tailwindcss -i ./app.css -o ./src/app_landing/static/app_landing/tailwind.css --watch --minify"
 
 [build-system]
 requires = ["pdm-backend"]

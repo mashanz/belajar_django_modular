@@ -19,7 +19,7 @@ pkgs.mkShell {
   packages = with pkgs; [
     git
     podman
-    nodejs_20
+    bun
     python311
     python311Packages.pip
     pkgs.pdm
