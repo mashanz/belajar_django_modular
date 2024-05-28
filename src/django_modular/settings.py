@@ -16,7 +16,7 @@ from pathlib import Path
 
 # Read Environent
 env = environ.Env(
-    DEBUG=(bool, False),
+    DEBUG=(bool, True),
     SECRET=(str, "django-insecure-u#4bba-6u#(rey_k5w3a#rhaw$q(7ivt*_i@8!3q5j5zyfb1^!"),
     POSTGRES_HOST=(str, "localhost"),
     POSTGRES_USER=(str, "postgres"),
