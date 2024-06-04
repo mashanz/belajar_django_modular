@@ -24,7 +24,7 @@ env = environ.Env(
     POSTGRES_DB=(str, "django_modular"),
     POSTGRES_PORT=(str, "5432"),
     ALLOWED_HOSTS=(list, ["*"]),
-    CSRF_TRUSTED_ORIGINS=(list, ["*"])
+    CSRF_TRUSTED_ORIGINS=(list, ["http://0.0.0.0:8000"])
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +41,10 @@ SECRET_KEY = env("SECRET")
 DEBUG = env("DEBUG")
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
-CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
+
+# Production mode only
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
 
 
 # Application definition

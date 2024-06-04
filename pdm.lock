@@ -4,8 +4,8 @@
 [metadata]
 groups = ["default"]
 strategy = ["cross_platform"]
-lock_version = "4.4"
-content_hash = "sha256:6c5678a6f35924c49f01e7ce5e9be06914daf68315f6bdab696f88dc71a0553e"
+lock_version = "4.4.1"
+content_hash = "sha256:e9d816dfd92aedfc69b8a5ee51058b433fd3af83e2426c2a444bf443b009e1d6"
 
 [[package]]
 name = "asgiref"
@@ -15,6 +15,29 @@ summary = "ASGI specs, helper code, and adapters"
 files = [
     {file = "asgiref-3.8.1-py3-none-any.whl", hash = "sha256:3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47"},
     {file = "asgiref-3.8.1.tar.gz", hash = "sha256:c343bd80a0bec947a9860adb4c432ffa7db769836c64238fc34bdc3fec84d590"},
+]
+
+[[package]]
+name = "click"
+version = "8.1.7"
+requires_python = ">=3.7"
+summary = "Composable command line interface toolkit"
+dependencies = [
+    "colorama; platform_system == \"Windows\"",
+]
+files = [
+    {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
+    {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+requires_python = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+summary = "Cross-platform colored terminal text."
+files = [
+    {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
+    {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
 
 [[package]]
@@ -40,6 +63,47 @@ summary = "A package that allows you to utilize 12factor inspired environment va
 files = [
     {file = "django-environ-0.11.2.tar.gz", hash = "sha256:f32a87aa0899894c27d4e1776fa6b477e8164ed7f6b3e410a62a6d72caaf64be"},
     {file = "django_environ-0.11.2-py2.py3-none-any.whl", hash = "sha256:0ff95ab4344bfeff693836aa978e6840abef2e2f1145adff7735892711590c05"},
+]
+
+[[package]]
+name = "granian"
+version = "1.4.1"
+requires_python = ">=3.8"
+summary = "A Rust HTTP server for Python applications"
+dependencies = [
+    "click>=8.0.0",
+    "uvloop~=0.18.0; sys_platform != \"win32\" and platform_python_implementation == \"CPython\"",
+]
+files = [
+    {file = "granian-1.4.1-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:98c66870a54a64847a9867ce305af0ce0ecb4c2b49fbd882ed47512d0e5701be"},
+    {file = "granian-1.4.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:4f46a7babcc82ec75c4654c011ec345f42665b81abb140f2875dbf576a890865"},
+    {file = "granian-1.4.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bc009cc9efe0cd6e97ac249feb1f69ce50a66b20c5aa79d4f1dd117f7d4edfb4"},
+    {file = "granian-1.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d10509fe69b5a062a6f5f63704701b29d00ced5881e0b939e695ae76b38269fb"},
+    {file = "granian-1.4.1-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:748b9a788acb3f8e152071fd0cd55cf2ca000ee34e506b89f9d8df57e1277c3c"},
+    {file = "granian-1.4.1-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:2d9e9a59dea5305e34ba49a6fe4fa3f41370a5a89c0d954765219ebb6e7aa739"},
+    {file = "granian-1.4.1-cp311-none-win_amd64.whl", hash = "sha256:cba1bc68b31ca3d17e29a18330c536eead57215ebb9b56c86906a72ab3b094d9"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-macosx_10_12_x86_64.whl", hash = "sha256:11d704431bfc85109ed5756de99c9ae4a02d4e03ffb1451077c77dd911b42773"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:48be64d9a8dd84b298275fe89d6e27cc350ebf16c32d4079325bb92f141a955a"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:abee8147722be267d00b15a0621911e56b9827dec93dc0135b1db21b0bd98e32"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dada2b8f8668817d6b7ffd74f50aa82ddab925108ffac84c72602021154d4c2b"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-musllinux_1_1_aarch64.whl", hash = "sha256:e7a09e6b295bdeaa28e377698a9be12cf10b4ce038959a1f610890712b9edeef"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-musllinux_1_1_x86_64.whl", hash = "sha256:aa910bbdf4e4a9bac31b505f5632b20c1444d3e71a83e588110a1a8e7e4ed1cd"},
+    {file = "granian-1.4.1-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:bb7fcc24d13465fc57c94db37e5492843b8401dd05cfa13c32ea6336b4a304a5"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-macosx_10_12_x86_64.whl", hash = "sha256:c0d640ae1550ab5093fb03aa7178d407ba9c6dd7d80daee04df107d45d6956c3"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-macosx_11_0_arm64.whl", hash = "sha256:cf64ef80a3313f75d3feeeca3f3513b6473366e23374ebf706a05189f5a54a19"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:76ed76bee24bcc39f4fca77c105a6befb4f3e5fcc8141c2bfb0987a5e130c80f"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:cb4e8e8976f4fffeb98bf163b593a11520fa8a7057315fa23d9af27f831287d0"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-musllinux_1_1_aarch64.whl", hash = "sha256:b6711c46611207aa29895755519a030d232f1b00d04fc693d095918e42fb5e8c"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-musllinux_1_1_x86_64.whl", hash = "sha256:551ad05d334b67d91987219f1e191b53384e5d7f0b614e4cc1358d6979763678"},
+    {file = "granian-1.4.1-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:16a5a7a1503be6eccffbe0b29a477be24626f8534c7a73a46268406b6878567a"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-macosx_10_12_x86_64.whl", hash = "sha256:7e1d11da88deb102d5f76f5b8feff4c649a92316ac89231374b5d3b67dced8b0"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-macosx_11_0_arm64.whl", hash = "sha256:fd6394bad8e9e9c4b8849fb6a056dc9b5d8b5e2f8d02cee41a066f574f063770"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:efc7930edb1957dcb4be20a38ca35e43b7a7fe2a32596411a7eec0d907b46083"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a8c409fb5fb371c47096ab37366add4e433da08afc9bed73a7d9cb949916ec04"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-musllinux_1_1_aarch64.whl", hash = "sha256:2fecb1046e0a7c4a39b521f30f648db663f3c11487c1985db944ced3a78390bf"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-musllinux_1_1_x86_64.whl", hash = "sha256:aaac86cac5d280f90db9bb17d9e65cb1606a1376daac239bcc0f33fb8ae2c45a"},
+    {file = "granian-1.4.1-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:7fe1ec1f500f6d0ee1ad647e2cdc5b61d5d0ecd9d8e60b56eed9d1d52a0f94b1"},
+    {file = "granian-1.4.1.tar.gz", hash = "sha256:a087036ba3124d8d8721195becae7503a404f3e17683b2f331355f25062377d6"},
 ]
 
 [[package]]
@@ -100,4 +164,19 @@ summary = "Provider of IANA time zone data"
 files = [
     {file = "tzdata-2024.1-py2.py3-none-any.whl", hash = "sha256:9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252"},
     {file = "tzdata-2024.1.tar.gz", hash = "sha256:2674120f8d891909751c38abcdfd386ac0a5a1127954fbc332af6b5ceae07efd"},
+]
+
+[[package]]
+name = "uvloop"
+version = "0.18.0"
+requires_python = ">=3.7.0"
+summary = "Fast implementation of asyncio event loop on top of libuv"
+files = [
+    {file = "uvloop-0.18.0-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:25b714f07c68dcdaad6994414f6ec0f2a3b9565524fba181dcbfd7d9598a3e73"},
+    {file = "uvloop-0.18.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:1121087dfeb46e9e65920b20d1f46322ba299b8d93f7cb61d76c94b5a1adc20c"},
+    {file = "uvloop-0.18.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:74020ef8061678e01a40c49f1716b4f4d1cc71190d40633f08a5ef8a7448a5c6"},
+    {file = "uvloop-0.18.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1f4a549cd747e6f4f8446f4b4c8cb79504a8372d5d3a9b4fc20e25daf8e76c05"},
+    {file = "uvloop-0.18.0-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:6132318e1ab84a626639b252137aa8d031a6c0550250460644c32ed997604088"},
+    {file = "uvloop-0.18.0-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:585b7281f9ea25c4a5fa993b1acca4ad3d8bc3f3fe2e393f0ef51b6c1bcd2fe6"},
+    {file = "uvloop-0.18.0.tar.gz", hash = "sha256:d5d1135beffe9cd95d0350f19e2716bc38be47d5df296d7cc46e3b7557c0d1ff"},
 ]
