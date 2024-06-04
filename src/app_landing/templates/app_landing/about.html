@@ -1,1 +1,26 @@
-ni adalah about dari {{ NAMA }}
+ini adalah about dari {{ NAMA }}<br/>
+Tahun = {{ YEAR }}<br/>
+agregasi = {{ AGREGASI }}<br/>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="text" name="nama" placeholder="nama" max="100">
+<input type="file" name="data_file" id="data_file" placeholder="umur">
+<button type="submit">submit</button>
+</form>
+
+<script>
+function fetch_data() {
+  fetch(/api/data', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': ''
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+}
+</script>

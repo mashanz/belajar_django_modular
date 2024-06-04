@@ -16,13 +16,15 @@ from pathlib import Path
 
 # Read Environent
 env = environ.Env(
-    DEBUG=(bool, True),
+    DEBUG=(bool, False),
     SECRET=(str, "django-insecure-u#4bba-6u#(rey_k5w3a#rhaw$q(7ivt*_i@8!3q5j5zyfb1^!"),
     POSTGRES_HOST=(str, "localhost"),
     POSTGRES_USER=(str, "postgres"),
     POSTGRES_PASSWORD=(str, "postgres"),
     POSTGRES_DB=(str, "django_modular"),
     POSTGRES_PORT=(str, "5432"),
+    ALLOWED_HOSTS=(list, ["*"]),
+    CSRF_TRUSTED_ORIGINS=(list, ["*"])
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,7 +40,8 @@ SECRET_KEY = env("SECRET")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
+CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
 
 
 # Application definition
@@ -69,7 +72,7 @@ ROOT_URLCONF = "django_modular.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -135,6 +138,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -1,0 +1,38 @@
+version: "3.5"
+
+services:
+  app_django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: django_modular
+      POSTGRES_PORT: 5432
+      SECRET: django-insecure-u#4bba-6u#(rey_k5w3a#rhaw$q(7ivt*_i@8!3q5j5zyfb1^!
+      DEBUG: True
+      ALLOWED_HOST: proxy.belajar-django-modular.orb.local
+      CSRF_TRUSTED_ORIGINS: https://proxy.belajar-django-modular.orb.local
+    volumes:
+      - shared-volume:/app/src/static
+    depends_on:
+      - db
+  proxy:
+    image: nginx
+    expose:
+      - "80:80"
+    volumes:
+      - ./docker/default.conf:/etc/nginx/conf.d/default.conf
+      - shared-volume:/app/src/static
+    depends_on:
+      - app_django
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: django_modular
+
+volumes:
+  shared-volume:
